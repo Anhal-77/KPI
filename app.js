@@ -1133,6 +1133,22 @@
     },
   };
 
+
+  // ── Expose modules to global scope ──
+  // HTML onclick attributes look up names on window.
+  // const declarations do not auto-attach to window,
+  // so we assign them explicitly here.
+  window.App             = App;
+  window.AdminApp        = AdminApp;
+  window.AdminPlans      = AdminPlans;
+  window.Auth            = Auth;
+  window.KPIEntry        = KPIEntry;
+  window.FileUpload      = FileUpload;
+  window.DeptView        = DeptView;
+  window.Manage          = Manage;
+  window.CorrectivePlan  = CorrectivePlan;
+  window.PDFExport       = PDFExport;
+
   /* ═══════════════════════════════════
      BOOT — Initialize the application
      when the page finishes loading.
